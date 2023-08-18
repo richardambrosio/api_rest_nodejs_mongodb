@@ -22,8 +22,9 @@ app.use('/person', personRoutes);
 mongoose
     .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.sfumow2.mongodb.net/apiDatabase?retryWrites=true&w=majority`)
     .then(() => {
-        console.log('MongoDB connected!')
+        console.log('MongoDB connected!');
         app.listen(3000);
+        console.log(3000);
     })
     .catch((err) => console.log(err));
 
